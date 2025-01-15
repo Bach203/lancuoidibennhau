@@ -1,0 +1,75 @@
+/* Đảm bảo phần thông tin sản phẩm (tên và giá) được ẩn khi hover */
+.Card .product-info {
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+/* Phần chữ "CHI TIẾT SẢN PHẨM" nảy lên */
+.product-details-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.7); /* Nền mờ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Ẩn mặc định */
+  transform: translateY(100%); /* Nảy từ dưới lên */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Khi hover vào Card, ẩn thông tin và thay thế bằng "CHI TIẾT SẢN PHẨM" */
+.Card:hover .product-info .product-name-price {
+  opacity: 0; /* Ẩn tên sản phẩm và giá tiền */
+}
+
+.Card:hover .product-details-text {
+  transform: translateY(0); /* Nảy lên */
+  opacity: 1; /* Hiển thị chữ "CHI TIẾT SẢN PHẨM" */
+}
+
+/* Các tùy chỉnh khác cho card */
+.Card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.product-name-price {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.product-info .product-name,
+.product-info .product-price {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+/* Đảm bảo hover tác động lên sản phẩm */
+.Card:hover .product-info .product-name,
+.Card:hover .product-info .product-price {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.product-card-container {
+  display: flex;
+  justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+  flex-wrap: wrap; /* Đảm bảo các phần tử có thể xuống dòng nếu không đủ không gian */
+  gap: 20px; /* Khoảng cách giữa các sản phẩm */
+}
+
+/* Căn giữa cho button */
+.button-container {
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  height: 100%; /* Chiều cao của container */
+  width: 100%; /* Chiều rộng của container */
+  position: relative; /* Nếu cần thiết */
+}

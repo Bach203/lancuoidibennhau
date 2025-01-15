@@ -1,0 +1,33 @@
+/* bestSellingHover.css */
+
+/* Đảm bảo phần thông tin sản phẩm (tên và giá) được ẩn khi hover */
+.bestSellingCard .product-info {
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+/* Phần chữ "CHI TIẾT SẢN PHẨM" nảy lên */
+.bestSellingCard .product-details-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.7); /* Nền mờ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Ẩn mặc định */
+  transform: translateY(100%); /* Nảy từ dưới lên */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Khi hover vào Card, ẩn thông tin và thay thế bằng "CHI TIẾT SẢN PHẨM" */
+.bestSellingCard:hover .product-info .product-name-price {
+  opacity: 0; /* Ẩn tên sản phẩm và giá tiền */
+}
+
+.bestSellingCard:hover .product-details-text {
+  transform: translateY(0); /* Nảy lên */
+  opacity: 1; /* Hiển thị chữ "CHI TIẾT SẢN PHẨM" */
+}

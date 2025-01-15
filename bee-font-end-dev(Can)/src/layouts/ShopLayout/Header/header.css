@@ -1,0 +1,16 @@
+.logo-text-container {
+  display: flex;
+  align-items: center; /* Căn giữa logo và text theo chiều dọc */
+  padding-right: 15px; /* Đảm bảo khoảng cách giữa logo và đường thẳng */
+}
+
+.logo2 {
+  width: 120%; /* Đảm bảo logo không bị phóng to quá mức */
+  height: "770px"; /* Đảm bảo tỉ lệ của logo không bị thay đổi */
+  margin-left: 100px; /* Tạo khoảng cách giữa logo và đường thẳng */
+  padding-right: 10px; /* Tạo khoảng cách giữa logo và đường thẳng */
+}
+
+.text {
+  margin-left: 10px; /* Tạo khoảng cách giữa đường thẳng và text */
+}

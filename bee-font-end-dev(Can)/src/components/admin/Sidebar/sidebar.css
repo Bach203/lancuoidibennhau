@@ -1,0 +1,10 @@
+.logo-text-container {
+  display: flex;
+  align-items: center; /* Căn giữa logo và text theo chiều dọc */
+}
+.logo1 {
+  margin-left: 15px; /* Di chuyển logo sang phải */
+  margin-top: -15px; /* Di chuyển logo lên trên */
+  margin-bottom: 25px; /* Giữ khoảng cách giữa logo và các mục menu */
+  flex-shrink: 0; /* Đảm bảo logo không bị co lại */
+}
